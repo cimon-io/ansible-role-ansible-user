@@ -10,8 +10,9 @@
     comment: User for processing ansible tasks
     name:  "{{ ansible_playbook_user }}"
     group: "{{ ansible_playbook_group }}"
-    shell: "/bin/bash"
+    groups: "{{ ansible_playbook_group }}"
     append: yes
+    shell: "/bin/bash"
   tags:
     - ansible-user
 
